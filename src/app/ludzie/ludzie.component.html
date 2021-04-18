@@ -1,0 +1,23 @@
+<p>Komponent ludzie działa</p>
+
+<div class="card" style="width: 18rem">
+  <img src="../assets/{{ czlowiek.zdjecie }}" alt="" />
+
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ czlowiek.nazwisko | uppercase }} - {{ czlowiek.imie }}
+    </h5>
+    <p>
+      Wiek: <b>{{ czlowiek.wiek }}</b>
+    </p>
+    <p>
+      Data: <b>{{ czlowiek.utworzony | date: "shortDate" }}</b>
+    </p>
+    <a href="#" class="btn btn-primary">Pokaż informacje</a>
+  </div>
+</div>
+
+<div class="mt-t">
+  <label for="nazwisko">Nazwisko osoby: </label>
+  <input id="nazwisko" />
+</div>
