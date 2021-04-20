@@ -7,11 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LudzieComponent } from './ludzie/ludzie.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LudzieComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
