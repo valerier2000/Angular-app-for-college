@@ -1,28 +1,32 @@
-<p>Komponent ludzie działa</p>
+<div *ngIf="wybranaOsoba">{{ wybranaOsoba.nazwisko }}</div>
+<div class="row">
+  <div class="col-sm-4" *ngFor="let czlowiek of moiludzie">
+    <div class="card" style="width: 18rem">
+      <img src="../assets/{{ czlowiek.zdjecie }}" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ czlowiek.nazwisko | uppercase }} - {{ czlowiek.imie }}
+        </h5>
+        <p>
+          Wiek: <b>{{ czlowiek.wiek }}</b>
+        </p>
+        <p>
+          Data: <b>{{ czlowiek.utworzony | date: "shortDate" }}</b>
+        </p>
+        <button class="btn btn-success" (click)="onSelect(czlowiek)">
+          Pokaż informacje
+        </button>
+      </div>
+    </div>
 
-<div class="card" style="width: 18rem">
-  <img src="../assets/{{ czlowiek.zdjecie }}" alt="" />
-
-  <div class="card-body">
-    <h5 class="card-title">
-      {{ czlowiek.nazwisko | uppercase }} - {{ czlowiek.imie }}
-    </h5>
-    <p>
-      Wiek: <b>{{ czlowiek.wiek }}</b>
-    </p>
-    <p>
-      Data: <b>{{ czlowiek.utworzony | date: "shortDate" }}</b>
-    </p>
-    <a href="#" class="btn btn-primary">Pokaż informacje</a>
+    <!-- <div class="mt-t">
+    <label for="nazwisko">Nazwisko osoby: </label>
+    <input
+      id="nazwisko"
+      [(ngModel)]="czlowiek.nazwisko"
+      placeholder="="
+      nazwisko
+    />
+  </div> -->
   </div>
-</div>
-
-<div class="mt-t">
-  <label for="nazwisko">Nazwisko osoby: </label>
-  <input
-    id="nazwisko"
-    [(ngModel)]="czlowiek.nazwisko"
-    placeholder="="
-    nazwisko
-  />
 </div>
