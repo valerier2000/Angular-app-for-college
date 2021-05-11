@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
 };
 
 /*
@@ -14,3 +14,11 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+const firebaseConfig = {
+  apiKey: 'AIzaSyDJjU02CEL7hREShL9KmeQ8f8cBqr-WZeM',
+  authDomain: 'myapp-32941.firebaseapp.com',
+  projectId: 'myapp-32941',
+  storageBucket: 'myapp-32941.appspot.com',
+  messagingSenderId: '692147926116',
+  appId: '1:692147926116:web:1b96bd35450c8829ff1b71',
+};

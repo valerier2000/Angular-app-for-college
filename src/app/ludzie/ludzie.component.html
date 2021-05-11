@@ -1,4 +1,53 @@
-<div *ngIf="wybranaOsoba">{{ wybranaOsoba.nazwisko }}</div>
+<div *ngIf="wybranaOsoba">
+  <h2>{{ wybranaOsoba.nazwisko }}</h2>
+  <label for="nazwisko-osoby">Nazwisko</label>
+  <input
+    type="text"
+    class="form-control"
+    id="nazwisko-osoby"
+    [(ngModel)]="wybranaOsoba.nazwisko"
+    placeholder="Nazwisko"
+  />
+  <label for="imie-osoby">Imię</label>
+  <input
+    type="text"
+    class="form-control"
+    id="imie-osoby"
+    [(ngModel)]="wybranaOsoba.imie"
+    placeholder="Imię"
+  />
+  <label for="wiek-osoby">Wiek</label>
+  <input
+    type="text"
+    class="form-control"
+    id="wiek-osoby"
+    [(ngModel)]="wybranaOsoba.wiek"
+    placeholder="Wiek"
+  />
+  <label for="wiek-osoby">Data utworzenia</label>
+  <input
+    type="text"
+    class="form-control"
+    id="wiek-osoby"
+    [(ngModel)]="wybranaOsoba.utworzony"
+    placeholder="Utworzony"
+  />
+  <label for="wiek-osoby">Zdjęcie</label>
+  <input
+    type="text"
+    class="form-control"
+    id="wiek-osoby"
+    [(ngModel)]="wybranaOsoba.zdjecie"
+    placeholder="Zdjęcie"
+  />
+</div>
+
+<ul>
+  <li *ngFor="let item of item$ | async">
+    {{ item.name }}
+  </li>
+</ul>
+
 <div class="row">
   <div class="col-sm-4" *ngFor="let czlowiek of moiludzie">
     <div class="card" style="width: 18rem">

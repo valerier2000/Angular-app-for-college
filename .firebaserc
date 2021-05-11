@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "myapp-32941": {
+      "hosting": {
+        "myapp": [
+          "myapp-32941"
+        ]
+      }
+    }
+  }
+}
